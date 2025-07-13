@@ -1,4 +1,4 @@
 aiogram
 httpx
-python-dotenv
+dotenv
 aiohttp
