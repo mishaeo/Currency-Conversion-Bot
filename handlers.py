@@ -20,30 +20,6 @@ class ConversionState(StatesGroup):
     target_currency = State()
     amount_input = State()
 
-
-@router.message(Command("hello"))
-async def start_handler(message: types.Message):
-    # Создаем кнопку
-    keyboard = InlineKeyboardMarkup(
-        inline_keyboard=[
-            [InlineKeyboardButton(text="hello", callback_data="start_pressed")]
-        ]
-    )
-
-    # Отправляем сообщение с кнопкой
-    await message.answer(
-        text="Что умеет этот бот?\n👋🍰☕🧍‍♂️🧍‍♀️🍷🎉",
-        reply_markup=keyboard
-    )
-
-# Обработка нажатия кнопки
-@router.callback_query(F.data == "start_pressed")
-async def on_start_pressed(callback: types.CallbackQuery):
-    await callback.answer("Вы нажали hello!", show_alert=False)
-
-
-
-
 @router.message(CommandStart())
 async def handle_start(message: Message, state: FSMContext):
     await state.clear()
