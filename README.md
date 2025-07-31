@@ -22,8 +22,7 @@ venv\Scripts\activate        # for Windows
 
 2. Clone the repository:
 
-git clone https://github.com/mishaeo/Currency-Conversion-Bot.git  
-cd Currency-Conversion-Bot
+git clone https://github.com/mishaeo/Currency-Conversion-Bot.git
 
 3. Install the required dependencies:
 
